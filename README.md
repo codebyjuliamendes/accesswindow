@@ -23,3 +23,7 @@ This MVP is a review ledger, not an identity provider: it does not grant or revo
 - `PATCH /api/access/:id` — revoke or renew a record
 
 Stack: Express, SQLite, and a responsive vanilla JavaScript UI.
+
+## Review queue and export
+
+`GET /api/review-due` returns active records already overdue or expiring within 14 days, and `GET /api/review-due.csv` downloads the same queue for a periodic access review. This app remains a review ledger; changes still need to be made in the connected identity or cloud system by an authorized operator.
