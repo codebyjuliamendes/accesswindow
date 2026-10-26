@@ -12,3 +12,14 @@ body{background-image:radial-gradient(ellipse at 94% 0%,#dceee1aa,transparent 32
 aside{box-shadow:8px 0 28px #15271c12}.welcome{border-radius:18px}
 .stats article,.table{border-radius:15px;box-shadow:0 12px 32px #18261b0a}
 .row{transition:background .16s ease}.row:hover{background:#f7faf7}
+
+/* Brand palette refresh — benchmarked for this product's own category */
+:root{--portfolio-accent:#48627f;--portfolio-soft:#e9eff4;--portfolio-canvas:#f5f7f9;}
+body{background-color:var(--portfolio-canvas)}
+.primary,.cta,.submit,.button.primary{background-color:var(--portfolio-accent)!important;color:#fff!important}
+.primary:hover,.cta:hover,.submit:hover,.button.primary:hover{filter:brightness(.93);box-shadow:0 8px 18px color-mix(in srgb,var(--portfolio-accent),transparent 78%)}
+.secondary,.ghost,.subtle{color:var(--portfolio-accent)}
+.rail-active,.nav.active,.sidebar .active,.brand-mark,.logo{--accent-color:var(--portfolio-accent)}
+.badge,.pill,.tag{--accent-color:var(--portfolio-accent)}
+
+.export{color:var(--portfolio-accent);background:var(--portfolio-soft)}.logo{color:var(--portfolio-accent)}
