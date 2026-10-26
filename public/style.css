@@ -23,3 +23,14 @@ body{background-color:var(--portfolio-canvas)}
 .badge,.pill,.tag{--accent-color:var(--portfolio-accent)}
 
 .export{color:var(--portfolio-accent);background:var(--portfolio-soft)}.logo{color:var(--portfolio-accent)}
+
+/* The logo and profile remain, while decorative fixed icons leave the page rail. */
+aside{position:relative;inset:auto;width:100%;height:62px;flex-direction:row;justify-content:space-between;gap:0;padding:0 max(22px,calc((100vw - 1220px)/2));border-right:0;border-bottom:1px solid #e7e9e6;box-shadow:none}
+aside>div:not(.logo):not(.bottom){display:none}
+main{margin-left:0!important;width:min(1220px,calc(100% - 48px));max-width:1220px;margin-inline:auto!important;padding:28px 0}
+@media(max-width:700px){aside{height:56px;padding:0 16px}main{width:calc(100% - 28px);padding:20px 0}}
+
+
+/* Editorial navigation and restrained surfaces */
+body{background-image:none!important}
+.panel,.changes-panel,.history-panel,.ticket-column,.detail,.knowledge,.preview-panel{box-shadow:none!important}
