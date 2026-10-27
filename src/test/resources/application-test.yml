@@ -1,0 +1,22 @@
+spring:
+  # Generate PostgreSQL SQL (lower-case quoted identifiers) against H2 in PostgreSQL mode.
+  data:
+    jdbc:
+      dialect: postgresql
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:h2:mem:accesswindow;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH;DB_CLOSE_DELAY=-1}
+    username: ${SPRING_DATASOURCE_USERNAME:sa}
+    password: ${SPRING_DATASOURCE_PASSWORD:}
+
+logging:
+  structured:
+    format:
+      console: ""
+  level:
+    dev.accesswindow: WARN
+
+accesswindow:
+  demo-seed: false
+  security:
+    rate-limit:
+      capacity: 10000

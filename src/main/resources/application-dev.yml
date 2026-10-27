@@ -1,0 +1,18 @@
+# Local development without PostgreSQL: file-based H2 in PostgreSQL mode, demo data, readable logs.
+spring:
+  # Generate PostgreSQL SQL (lower-case quoted identifiers) against H2 in PostgreSQL mode.
+  data:
+    jdbc:
+      dialect: postgresql
+  datasource:
+    url: jdbc:h2:file:./data/accesswindow-dev;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH
+    username: sa
+    password: ""
+
+logging:
+  structured:
+    format:
+      console: ""
+
+accesswindow:
+  demo-seed: ${DEMO_SEED:true}
