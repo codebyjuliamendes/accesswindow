@@ -1,0 +1,12 @@
+.git
+.github
+.gradle
+.kotlin
+.idea
+build
+data
+*.md
+.env
+.env.*
+docker-compose.yml
+Dockerfile
