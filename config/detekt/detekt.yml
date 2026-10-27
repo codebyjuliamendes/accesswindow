@@ -1,0 +1,33 @@
+# Overrides on top of detekt's default rule set (buildUponDefaultConfig = true).
+build:
+  maxIssues: 0
+
+style:
+  MaxLineLength:
+    maxLineLength: 140
+  ReturnCount:
+    max: 3
+  ForbiddenComment:
+    active: true
+  WildcardImport:
+    active: true
+  MagicNumber:
+    ignoreAnnotation: true
+    ignorePropertyDeclaration: true
+    excludes: ['**/test/**']
+
+complexity:
+  LongParameterList:
+    functionThreshold: 7
+    constructorThreshold: 12
+  TooManyFunctions:
+    thresholdInClasses: 15
+    thresholdInFiles: 20
+
+naming:
+  FunctionNaming:
+    excludes: ['**/test/**']
+
+exceptions:
+  TooGenericExceptionCaught:
+    active: true
