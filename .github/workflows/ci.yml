@@ -22,7 +22,7 @@ jobs:
         with:
           distribution: temurin
           java-version: 21
-      - uses: gradle/actions/setup-gradle@v5
+      - uses: gradle/actions/setup-gradle@v6
       - run: ./gradlew check
       - if: failure()
         uses: actions/upload-artifact@v4
@@ -54,7 +54,7 @@ jobs:
         with:
           distribution: temurin
           java-version: 21
-      - uses: gradle/actions/setup-gradle@v5
+      - uses: gradle/actions/setup-gradle@v6
       - run: ./gradlew test
 
   docker:
