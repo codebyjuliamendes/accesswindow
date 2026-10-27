@@ -1,3 +1,16 @@
-node_modules/
+# Build
+.gradle/
+build/
+.kotlin/
+out/
+
+# Local runtime data (dev H2 database)
 data/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Secrets
 .env
